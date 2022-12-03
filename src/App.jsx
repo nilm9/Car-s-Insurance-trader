@@ -1,9 +1,11 @@
-import AppSeguro from "../components/AppSeguro"
-
+import AppSeguro from "./components/AppSeguro"
+import { TraderProvider } from "./context/TradeProvider"
 function App() {
 
   return (
-    <AppSeguro/>
+    <TraderProvider>
+        <AppSeguro/>
+    </TraderProvider>
   )
 }
 

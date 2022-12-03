@@ -1,7 +1,6 @@
-import React from 'react'
-import { MARCAS } from '../constants'
-
-const Form = () => {
+import {Fragment} from 'react'
+import { BRANDS, YEARS, PLANS} from '../constants'
+const FormCars = () => {
   return (
     <>
         <form>
@@ -12,33 +11,32 @@ const Form = () => {
                 <select
                     name="marca"
                     className="w-full p-3 bg-white border border-gray-200"
-                    onChange={ e => handleChangeDatos(e)}
-                    value={datos.marca}
                 >
-                    <option value="">-- Selecciona Marca --</option>
-
-                    {MARCAS.map(marca => (
+                    <option value="">-- Select Brand --</option>
+                    {BRANDS.map(brand => (
                         <option
-                            key={marca.id}
-                            value={marca.id}
+                        key={brand.id}
+                        value={brand.id}
                         >
-                            {marca.nombre}
+                            {brand.name}
                         </option>
                     ))}
+
+                    
                 </select>
             </div>
-{/* 
+            
+ 
             <div className="my-5">
                 <label className="block mb-3 font-bold text-gray-400 uppercase">
-                    Año
+                    Year
                 </label>
                 <select
                     name="year"
                     className="w-full p-3 bg-white border border-gray-200"
-                    onChange={ e => handleChangeDatos(e)}
-                    value={datos.year}
+                   
                 >
-                    <option value="">-- Selecciona Año --</option>
+                    <option value="">-- Select Year --</option>
 
                     {YEARS.map(year => (
                         <option
@@ -53,19 +51,18 @@ const Form = () => {
 
             <div className="my-5">
                 <label className="block mb-3 font-bold text-gray-400 uppercase">
-                    Elige un Plan
+                    Choose your plan
                 </label>
                 <div className='flex gap-3 items-center'>
-                    {PLANES.map(plan => (
+                    {PLANS.map(plan => (
                         <Fragment key={plan.id}>
                             <label>
-                                {plan.nombre}
+                                {plan.name}
                             </label>
                             <input
                                 type="radio"
                                 name="plan"
                                 value={plan.id}
-                                onChange={ e => handleChangeDatos(e)}
                             />
                         </Fragment>
                     ))}
@@ -75,8 +72,8 @@ const Form = () => {
             <input 
                 type="submit"
                 className='w-full bg-indigo-500 hover:bg-indigo-600 transition-colors text-white cursor-pointer p-3 uppercase font-bold'
-                value="Cotizar"
-            /> */}
+                value="Trade"
+            />
         </form>
     
     
@@ -84,4 +81,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default FormCars
