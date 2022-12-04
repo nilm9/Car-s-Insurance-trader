@@ -22,12 +22,13 @@ const TraderProvider = ({children}) => {
 
     const tradeInsurance = () => {
         //A base
-        const sub = getSubYear(data.year)
-        console.log(sub);
+        let result = 2000
+
         // get difference from years
-
+        const sub = getSubYear(data.year)
         // Sub 3% from each year
-
+        result += ((sub *3) * result) / 100
+        
         //Aamerican 15%
         //European 30%
         //Asiatic 5%
