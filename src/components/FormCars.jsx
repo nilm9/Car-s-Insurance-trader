@@ -13,11 +13,9 @@ const FormCars = () => {
         console.log("entra funcs");
         if(Object.values(data).includes('')){
             setError(true)
-            console.log(data);
-            console.log("holaaa");
             setTimeout(() => {
                 setError(false)
-            }, 3000);
+            }, 1000);
             return;
         }
         tradeInsurance()

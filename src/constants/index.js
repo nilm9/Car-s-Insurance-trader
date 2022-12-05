@@ -1,7 +1,7 @@
 export const BRANDS = [
-  { id: 1, name: "Europeo" },
-  { id: 2, name: "Americano" },
-  { id: 3, name: "Asíatico" },
+  { id: 1, name: "European" },
+  { id: 2, name: "American" },
+  { id: 3, name: "Asiatic" },
 ];
 
 const YEARMAX = new Date().getFullYear();
